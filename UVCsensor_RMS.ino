@@ -81,13 +81,13 @@ void loop() {
   if (limit0 < mwattPerSqrCMtr) {
     digitalWrite(qlimit0, HIGH);
   } else {
-    digitalWrite(qlimit0, HIGH);
+    digitalWrite(qlimit0, LOW);
   }
 
   if (limit1 < mwattPerSqrCMtr) {
     digitalWrite(qlimit1, HIGH);
   } else {
-    digitalWrite(qlimit1, HIGH);
+    digitalWrite(qlimit1, LOW);
   }
 
   //Send data til DAC
