@@ -25,7 +25,7 @@ unsigned long sensorTotal;
 unsigned int sensorNumSamples; //Variabel for faktisk antall avlesninger
 unsigned int sensorRMS;
 double voltRMS;
-double mwattPerSqrCMtr; //Ferdig behandlet signal fra sensor i watt/m2
+double mwattPerSqrCMtr; //Ferdig behandlet signal fra sensor i milliwatt/cm2
 
 unsigned long lastTime;
 
