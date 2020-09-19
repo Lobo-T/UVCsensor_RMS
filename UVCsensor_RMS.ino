@@ -10,6 +10,9 @@
 
 #include <Wire.h>
 
+#define uvcpin A0   //Analogpin UVC sensor er koplet på
+#define pot1 A1     //Analogpin potentiometer 1 er koplet på
+#define pot2 A2     //Analogpin potentiometer 2 er koplet på
 #define limit0 2.0  //Grenseverdi mW/cm2 for utgang 0
 #define limit1 5.0  //Grenseverdi mW/cm2 for utgang 1
 #define qlimit0 2   //Arduino pinnenummer for utgang 0
@@ -45,8 +48,8 @@ void loop() {
   lastTime = millis();
 
   while (millis() - lastTime < sampleTime) {//Forsiktig med hvor lenge vi tar gjennomsnittet over.
-    sensorRaw = analogRead(A0);             //Det er bare plass til ca. 4100 maksavlesninger i en unsigned long.
-    //500ms risikerer å gi overflow.
+    sensorRaw = analogRead(uvcpin);             //Det er bare plass til ca. 4100 maksavlesninger i en unsigned long.
+                                            //500ms risikerer å gi overflow.
     sensorTotal = sensorTotal + (sensorRaw * sensorRaw);
     sensorNumSamples = sensorNumSamples + 1;
   }
@@ -110,4 +113,3 @@ void loop() {
   delay(50);
 #endif
 }
-
