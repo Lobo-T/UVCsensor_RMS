@@ -93,7 +93,7 @@ void loop() {
   //Send data til DAC
   byte hibyte, lobyte;
   lobyte = sensorRMS << 2;
-  hibyte = sensorRMS >> 6;
+  hibyte = (sensorRMS >> 6) && 00111111;
   Wire.beginTransmission(DACaddr);
   Wire.write(hibyte);
   Wire.write(lobyte);
