@@ -20,8 +20,8 @@
 #define uvcpin A0   //Analogpin UVC sensor er koplet på
 #define pot1 A1     //Analogpin potentiometer 1 er koplet på
 #define pot2 A2     //Analogpin potentiometer 2 er koplet på
-#define limit0 2.0  //Grenseverdi mW/cm2 for utgang 0
-#define limit1 5.0  //Grenseverdi mW/cm2 for utgang 1
+#define limit0 0.5  //Grenseverdi mW/cm2 for utgang 0
+#define limit1 2.0  //Grenseverdi mW/cm2 for utgang 1
 #define qlimit0 2   //Arduino pinnenummer for utgang 0
 #define qlimit1 3   //Arduino pinnenummer for utgang 1
 #define DACaddr B1100000 //MCP4716A0T-E DAC i2c addresse
